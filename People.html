@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="title.css">
+</head>
+
+<style type="text/css">
+    .peoples{
+        width: 90%;
+        margin: 50px auto;
+        font-family: "MS UI Gothic";
+        font-size: 20px;
+    }
+    .p1{
+        font-family: Bernard MT Condensed;
+        font-size: 40px;
+        float: left;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .first_line{
+        background-color: #4244f4;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+    }
+    a{
+        cursor: pointer;
+        color: black;
+    }
+    .lines tr{
+        height: 100px;
+    }
+    .lines tr td{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+</style>
+
+<body>
+
+<!--title-->
+<table width="100%" align="center" cellspacing="1" cellpadding="1" border="0">
+    <tr>
+        <td>
+            <table width="100%" align="center">
+                <tr class="tr1">
+                    <td class="td1">
+                        People
+                    </td>
+                    <td class="td2">
+                        <a href="Navigation%20Page.html" style="color: white;">
+                            <i class="fa fa-home fa-3x" ></i>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<div class="peoples" id="peoples">
+    <!--Faculties-->
+    <p class="p1">Faculties：</p>
+
+    <table width="90%" class="lines" id="faculties" border="1px">
+        <tr class="first_line">
+            <td>Name</td>
+            <td>
+                Contact Information
+            </td>
+            <td>
+                Brief Introduction
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="Professor.html">Xinggang Zhang</a>
+            </td>
+            <td>
+                Boxue building 324-1, College of Physics, Guizhou University<br>
+                Tel:   +86–13885065447<br>
+                E-mail: xgzhang@gzu.edu.cn<br>
+            </td>
+            <td>
+                Ph.D./ Professor and Master Supervisor of Physics
+            </td>
+        </tr>
+    </table>
+
+    <!--Student-->
+    <p class="p1">Students：</p>
+
+    <table width="90%" class="lines" id="students" border="1px">
+        <tr class="first_line">
+            <td>Name</td>
+            <td>
+                Contact Information
+            </td>
+            <td>
+                Brief Introduction
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<script type="text/javascript">
+    if (window.XMLHttpRequest){
+        xmlhttp=new XMLHttpRequest();
+    }else{
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("GET","xmlDirectory/people.xml",false);
+    xmlhttp.send();
+    xmlDoc=xmlhttp.responseXML;
+
+    //faculites
+    var f=xmlDoc.getElementsByTagName('faculites');
+    var faculties=document.getElementById('faculties');
+    for (var i=0;i<f.length;i++){
+        var trs=document.createElement('tr');
+        var td1=document.createElement('td');
+        td1.innerText=f[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+        faculties.appendChild(trs);
+        trs.appendChild(td1)
+        var td2=document.createElement('td');
+        td2.innerText=f[i].getElementsByTagName("ContactInformation")[0].childNodes[0].nodeValue;
+        trs.appendChild(td2)
+        var td3=document.createElement('td');
+        td3.innerText=f[i].getElementsByTagName("BriefIntroduction")[0].childNodes[0].nodeValue;
+        trs.appendChild(td3);
+    }
+
+    //students
+    var s=xmlDoc.getElementsByTagName('student');
+    var students=document.getElementById('students');
+    for (var i=0;i<s.length;i++){
+        var trs=document.createElement('tr');
+        var td1=document.createElement('td');
+        td1.innerText=s[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+        students.appendChild(trs);
+        trs.appendChild(td1)
+        var td2=document.createElement('td');
+        td2.innerText=s[i].getElementsByTagName("ContactInformation")[0].childNodes[0].nodeValue;
+        trs.appendChild(td2)
+        var td3=document.createElement('td');
+        td3.innerText=s[i].getElementsByTagName("BriefIntroduction")[0].childNodes[0].nodeValue;
+        trs.appendChild(td3);
+    }
+
+</script>
+
+</body>
+</html>

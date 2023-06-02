@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Page</title>
+</head>
+
+<style type="text/css">
+    *{
+        margin:0;
+        padding:0;
+        text-decoration:none;
+        list-style:none;}
+    body{
+        width: 100%;
+        background-image: url("background/first-background.jpg");
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;}
+    .title{
+        font-size: 40px;
+        font-family: Elephant;
+        color: #e43324;
+        margin: 30px auto;
+        text-align: center;
+    }
+    #a1{
+        width:1000px;
+        height:50px;
+        margin:30px auto;
+        text-align:center;
+        margin-top: 3%;
+        margin-left: 13%;}
+    #a2 li{
+        float:left;
+        width:120px;
+        height:50px;
+        background-color:#9FF;
+        margin-left:1px;
+        line-height:50px;}
+    #a2 li a:hover{
+        display:block;
+        background-color:#333;
+        color:#CFF;
+        width:150px;
+        height:50px;}
+    .texts{
+        width: 80%;
+        margin: 50px auto;
+    }
+    .texts p{
+        text-indent: 2em;
+        color: white;
+        font-size: 18.5px;
+    }
+</style>
+<script type="text/javascript">
+    window.onload=function(){
+        var array=document.getElementById("a2").getElementsByTagName("li");
+        for(var i=0;i<array.length;i++){
+            if(array[i].className="se"){
+                array[i].onmouseover=function(){
+                    this.className="show";
+                }
+                array[i].onmouseout=function(){
+                    this.className="";
+                }
+            }
+
+        }
+    }
+</script>
+
+<body>
+<div class="title">
+    <p>
+        Research group of statistical physics<br>
+        and complex systems
+    </p>
+
+</div>
+<div id="a1">
+    <ul id="a2">
+        <li><a href="HomePage.html">Home</a></li>
+        <li class="se"><a href="Professor.html">Professor</a></li>
+        <li><a href="People.html">People</a></li>
+        <li><a href="Research.html">Research</a></li>
+        <li><a href="Laboratory.html">Laboratory</a></li>
+        <li><a href="Publications.html">Publications</a></li>
+        <li><a href="Links.html">Links</a></li>
+    </ul>
+</div>
+
+<div class="texts">
+    <p>
+        Welcome to Zhang's Group. This is a research group of statistical physics and complex systems at the College of Physics in the Guizhou University. The main goal of our research group is to develop theoretical and numerical calculation methods based on dynamic systems and statistical physics, and use them to study related problems in complex systems such as soft condensed matter systems and digital image systems. Currently, we are interested in research topics such as mechanical networks and their statistical mechanics for discrete systems, the structure and mechanical properties of granular materials, self-organization of granular materials, shape statistical analysis and pattern recognition of images. We are always looking for good undergraduate and graduate students to participate our group. Students participating in our group will have the opportunity to share the resources of our laboratory and make significant advances in their abilities. If you are interested in the research area of this group, please contact Xinggang Zhang(http://).
+    </p>
+</div>
+
+</body>
+</html>

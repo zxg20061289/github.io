@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Publications</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="title.css">
+</head>
+
+<style type="text/css">
+    .parents{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .parents li{
+        padding-top: 10px;
+    }
+</style>
+
+<script type="text/javascript">
+    window.onload=function (){
+        if (window.XMLHttpRequest){
+            xmlhttp=new XMLHttpRequest();
+        }else{
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.open("GET","xmlDirectory/Publications.xml",false);
+        xmlhttp.send();
+        xmlDoc=xmlhttp.responseXML;
+        var x=xmlDoc.getElementsByTagName("thesis");
+        var parents=document.getElementById('parents');
+        for (var i=0;i<x.length;i++){
+            var lis=document.createElement('li');
+            var writes=parents.appendChild(lis);
+            writes.innerHTML+=x[i].getElementsByTagName("detaile")[0].childNodes[0].nodeValue;
+        }
+    }
+
+</script>
+
+<body>
+
+<table width="100%" align="center" cellspacing="1" cellpadding="1" border="0">
+    <!--title-->
+    <tr>
+        <td>
+            <table width="100%" align="center">
+                <tr class="tr1">
+                    <td class="td1">
+                        Publications
+                    </td>
+                    <td class="td2">
+                        <a href="Navigation%20Page.html" style="color: white;">
+                            <i class="fa fa-home fa-3x" ></i>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+<ul id="parents" class="parents"></ul>
+
+</body>
+</html>
