@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<STUDENT>
+    <faculites>
+        <name>Yan Tang</name>
+        <ContactInformation>
+            E-mail: tang_yan68@sina.com
+        </ContactInformation>
+        <BriefIntroduction>
+            Senior Experimentalist of Physics
+        </BriefIntroduction>
+    </faculites>
+    <student>
+        <name>Qicheng Hu</name>
+        <ContactInformation>
+            #
+        </ContactInformation>
+        <BriefIntroduction>
+            Master Student/Class 2022
+        </BriefIntroduction>
+    </student>
+    <student>
+        <name>Jie Zhang</name>
+        <ContactInformation>
+            #
+        </ContactInformation>
+        <BriefIntroduction>
+            Undergraduate Student/Class 2020
+        </BriefIntroduction>
+    </student>
+    <student>
+        <name>Dejun Ge</name>
+        <ContactInformation>
+            #
+        </ContactInformation>
+        <BriefIntroduction>
+            Undergraduate Student/Class 2020
+        </BriefIntroduction>
+    </student>
+</STUDENT>
