@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration:none;}
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.tr1{
+    height: 100px;
+    background-color: #4244f4;
+    line-height: 100px;
+}
+.td1{
+    float: left;
+    color: #ffffff;
+    font-size: 50px;
+    font-family: Elephant;
+    margin-left: 20px;
+}
+.td2{
+    float: right;
+    margin-right: 20px;
+}
