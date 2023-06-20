@@ -13,7 +13,7 @@
     <student>
         <name>Qicheng Hu</name>
         <ContactInformation>
-            #
+            E-mail:2110550996@qq.com
         </ContactInformation>
         <BriefIntroduction>
             Master Student/Class 2022
@@ -22,7 +22,7 @@
     <student>
         <name>Jie Zhang</name>
         <ContactInformation>
-            #
+            E-mail:306268260@qq.com
         </ContactInformation>
         <BriefIntroduction>
             Undergraduate Student/Class 2020
@@ -31,10 +31,19 @@
     <student>
         <name>Dejun Ge</name>
         <ContactInformation>
-            #
+            E-mail:1658295049@qq.com
         </ContactInformation>
         <BriefIntroduction>
             Undergraduate Student/Class 2020
+        </BriefIntroduction>
+    </student>
+ <student>
+        <name>Jinqin Cui</name>
+        <ContactInformation>
+             E-mail:1415218116@qq.com
+        </ContactInformation>
+        <BriefIntroduction>
+            Undergraduate Student/Class 2021
         </BriefIntroduction>
     </student>
 </STUDENT>
